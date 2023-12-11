@@ -74,15 +74,15 @@ private static String getDayuffix(int day) {
 
 public static void Q3() {
     System.out.println("Q3: Enter how many numbers you want to check for primality: ");
-    int n = Integer.parseInt(scan.nextLine());
-    int counter = 0;
-    for (int i = 0; i < n; i++) {
-    if (i < 2)
+    int maxNumber = Integer.parseInt(scan.nextLine());
+    int primeCount = 0;
+    for (int current = 0; current < maxNumber; current++) {
+    if (current < 2)
     continue;
     boolean check = true;
 
-    for (int j = 2; j * j <= i; j++) {
-    if (i % j == 0) {
+    for (int j = 2; j * j <= current; j++) {
+    if (current % j == 0) {
     check = false;
     break;
     } else {
@@ -90,12 +90,11 @@ public static void Q3() {
     }
     }
         if (check == true) {
-        counter++;
+        primeCount++;
         } 
-        else {}
     }
 
-        System.out.println("There are: " + counter + " primes between 0 and " + n);
+        System.out.println("There are: " + primeCount + " primes between 0 and " + maxNumber);
     }
 
     public static void Q4() {
