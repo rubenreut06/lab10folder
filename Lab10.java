@@ -52,75 +52,25 @@ public class Lab10 {
             "", "January", "February", "March", "April", "May", "June",
             "July", "August", "September", "October", "November", "December"
         };
-
-        if (day == 1)
-            System.out.print("You selected 1st of ");
-        else if (day == 2)
-            System.out.print("You selected 2nd of ");
-        else if (day == 3)
-            System.out.print("You selected 3rd of ");
-        else if (day == 4)
-            System.out.print("You selected 4th of ");
-        else if (day == 5)
-            System.out.print("You selected 5th of ");
-        else if (day == 6)
-            System.out.print("You selected 6th of ");
-        else if (day == 7)
-            System.out.print("You selected 7th of ");
-        else if (day == 8)
-            System.out.print("You selected 8th of ");
-        else if (day == 9)
-            System.out.print("You selected 9th of ");
-        else if (day == 10)
-            System.out.print("You selected 10th of ");
-        else if (day == 11)
-            System.out.print("You selected 11th of ");
-        else if (day == 12)
-            System.out.print("You selected 12th of ");
-        else if (day == 13)
-            System.out.print("You selected 13th of ");
-        else if (day == 14)
-            System.out.print("You selected 14th of ");
-        else if (day == 15)
-            System.out.print("You selected 15th of ");
-        else if (day == 16)
-            System.out.print("You selected 16th of ");
-        else if (day == 17)
-            System.out.print("You selected 17th of ");
-        else if (day == 18)
-            System.out.print("You selected 18th of ");
-        else if (day == 19)
-            System.out.print("You selected 19th of ");
-        else if (day == 20)
-            System.out.print("You selected 20th of ");
-        else if (day == 21)
-            System.out.print("You selected 21st of ");
-        else if (day == 22)
-            System.out.print("You selected 22nd of ");
-        else if (day == 23)
-            System.out.print("You selected 23rd of ");
-        else if (day == 24)
-            System.out.print("You selected 24th of ");
-        else if (day == 25)
-            System.out.print("You selected 25th of ");
-        else if (day == 26)
-            System.out.print("You selected 26th of ");
-        else if (day == 27)
-            System.out.print("You selected 27th of ");
-        else if (day == 28)
-            System.out.print("You selected 28th of ");
-        else if (day == 29)
-            System.out.print("You selected 29th of ");
-        else if (day == 30)
-            System.out.print("You selected 30th of ");
-        else if (day == 31)
-            System.out.print("You selected 31st of ");
-        else {
-            System.out.println("Invalid day");
-        }
-
-        System.out.println(months[month]);
+        
+        String suffix = getDaySuffix(day);
+        System.out.println("You selected " + day + suffix + " of " + months[month]);
     }
+private static String getDaySuffix(int day) {
+    if (day >= 11 && day <= 13) {
+        return "th";
+    } else if (day == 1 || day == 21 || day == 31) {
+        return "st";
+    } else if (day == 2 || day == 22) {
+        return "nd";
+    } else if (day == 3 || day == 23) {
+        return "rd";
+    } else {
+        return "th";
+    }
+}
+
+    
 
 public static void Q3() {
     System.out.println("Q3: Enter how many numbers you want to check for primality: ");
