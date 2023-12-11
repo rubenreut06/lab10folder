@@ -56,7 +56,7 @@ public class Lab10 {
         String suffix = getDaySuffix(day);
         System.out.println("You selected " + day + suffix + " of " + months[month]);
     }
-private static String getDaySuffix(int day) {
+private static String getDayuffix(int day) {
     if (day >= 11 && day <= 13) {
         return "th";
     } else if (day == 1 || day == 21 || day == 31) {
